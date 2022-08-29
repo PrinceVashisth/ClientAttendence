@@ -35,12 +35,15 @@
     margin-bottom: 20px;
 }
 .input { 
-    width: 80%;
+    width: 90%;
     height: 35px;
     margin: 5px auto;
-    text-align: center;
-    border-radius: 50px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    padding-left: 20px;
 }
+
 
 @media only screen and (max-width:700px) {
     .form{

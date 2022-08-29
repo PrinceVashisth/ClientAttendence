@@ -2,7 +2,13 @@ import { useState } from "react";
 import "./RegisterForm.css";
 
 function Teacher() {
-  const [input, setInput] = useState({});
+  const [input, setInput] = useState({
+    username:'',
+    College_Id:"",
+    email:"",
+    password:"",
+    cpassword:""
+  });
   const changeHandler = (e) => {
     const { name, value } = e.target;
     setInput({
@@ -13,10 +19,10 @@ function Teacher() {
   const submitHandler = (e) => {
     e.preventDefault();
   };
-  if (!username || !College_Id || !email || !password || !cpassword) {
+  if (!input.username || !input.College_Id || !input.email || !input.password || !input.cpassword) {
     alert("please fill all the fields");
     return;
-  } else if (password !== cpassword) {
+  } else if (input.password !== input.cpassword) {
     alert("password and confirm password must be same");
     return;
   }
